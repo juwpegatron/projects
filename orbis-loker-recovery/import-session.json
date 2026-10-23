@@ -1,0 +1,65 @@
+{
+  "info": {
+    "id": "ses_orbisworkrecover00000001",
+    "slug": "recovered-orbis-work",
+    "projectID": "global",
+    "directory": "C:/Users/juwen_lie/Documents/Default Project",
+    "path": "Users/juwen_lie/Documents/Default Project",
+    "title": "Orbis Work - continue (recovered from Orbis Loker)",
+    "agent": "Sisyphus - ultraworker",
+    "model": {
+      "id": "Pega-Coding",
+      "providerID": "pegaai",
+      "variant": "default"
+    },
+    "version": "1.16.2",
+    "summary": {
+      "additions": 0,
+      "deletions": 0,
+      "files": 0
+    },
+    "cost": 0,
+    "tokens": {
+      "input": 0,
+      "output": 0,
+      "reasoning": 0,
+      "cache": {
+        "read": 0,
+        "write": 0
+      }
+    },
+    "time": {
+      "created": 1792669073527,
+      "updated": 1792669073527
+    }
+  },
+  "messages": [
+    {
+      "info": {
+        "role": "user",
+        "time": {
+          "created": 1792669073527
+        },
+        "agent": "Sisyphus - ultraworker",
+        "model": {
+          "providerID": "pegaai",
+          "modelID": "Pega-Coding"
+        },
+        "summary": {
+          "diffs": []
+        },
+        "id": "msg_orbisworkrecover00000001",
+        "sessionID": "ses_orbisworkrecover00000001"
+      },
+      "parts": [
+        {
+          "type": "text",
+          "text": "You are continuing a prior OpenCode session titled \"Orbis Loker\" that became too large to compact. The full recovered memory is below (HANDOFF.md), and also on disk at C:\\Users\\juwen_lie\\Documents\\Default Project\\orbis-loker-recovery\\HANDOFF.md.\n\nWhen I say \"go\", continue the PENDING TASK in section 4: add company pages, employer chat (tabs/templates/action bar) and mass-apply to Orbis's `work` view in BOTH apps/orbis/web/app.html and app-mobile.html, wired to Orbis's bridge. Note app.html currently has dangling partial edits that must be finished or reverted.\n\nFor now, just confirm you have the context and wait for my go-ahead. Do NOT modify any files yet.\n\n===== BEGIN HANDOFF.md =====\n\n# HANDOFF — Orbis Work (recovered from the stuck \"Orbis Loker\" session)\n\n> **Why this file exists.** The OpenCode session titled **\"Orbis Loker\"**\n> (`ses_e9eabb1f1ffeXWdAZtI71fMg7r`) grew too large to auto-compact\n> (\"Session too large to compact — context exceeds model limit even after\n> stripping media\"). Its history was exported locally and compressed into this\n> handoff so a **new session can continue the work with the memory intact**.\n> Recovered on 2026-10-22.\n\n---\n\n## 0. Provenance / where the memory came from\n- Recovery folder: `C:\\Users\\juwen_lie\\Documents\\Default Project\\orbis-loker-recovery\\`\n  - `HANDOFF.md` (this file) — the distilled memory\n  - `dialogue.md` — full user/assistant text from the old session (~100 KB)\n  - `transcript.md` — same + tool calls/outputs (compressed, ~271 KB)\n  - `files-touched.txt` — every file path the old session wrote to\n\n---\n\n## 1. The project\n- **Path:** `C:\\Users\\juwen_lie\\Documents\\Default Project`\n- **Git repo**, branch `main`, remote `https://github.com/juwpegatron/projects.git` (**public**)\n- **Monorepo** of zero-dependency apps: `apps/orbis`, `apps/peers`, `apps/house-of-articles`\n  - `apps/loker` and `apps/orbis-work` were **merged into Orbis and deleted** (commits `ee6f945`).\n- `git` is installed but **not on PATH**: `C:\\Users\\juwen_lie\\AppData\\Local\\Programs\\Git\\cmd\\git.exe`\n\n## 2. What the (old) session accomplished\nStarted as a strategic question about cloning **BOSS Zhipin** (Chinese chat-first job app) for\nIndonesia → became a build:\n1. Built **Loker** — a chat-first job platform for Indonesia (4th app), with a **\"Verified\n   Employer\" anti-scam wedge**, AI match %, bilingual EN⇄ID, login/signup, offline single-file HTML\n   + stdlib Python backend.\n2. Mirrored **zhipin.com**'s core loop (dense job cards, power filters, company pages, chat\n   tabs/templates/action bar, dual-mode seeker⇄recruiter, virtual résumé, mass-apply, VIP).\n3. Pushed to GitHub (`juwpegatron/projects`) + GitHub Pages; added Obsidian notes.\n4. Merged **Orbis + Loker** → `apps/orbis-work`; then **integrated it back INTO `apps/orbis`**\n   (deleting `loker` + `orbis-work`).\n5. Final \"ideal\" step: **restored Orbis's original richer app and ported the marketplace into its\n   built-in `work` view** (commit `846d564`), keeping Orbis's indigo/teal look.\n\n### Current product state — **Orbis Work inside `apps/orbis`**\n- `apps/orbis/web/app.html` (desktop, ~148 KB) + `apps/orbis/web/app-mobile.html` (~161 KB)\n- `apps/orbis/server/server.py` (stdlib, **port 8765**, 27-key state) — **Orbis is server-first\n  (uses `fetch`)**; the `work` collection seed = roles(6)/employers(4)/candidates(5)/chats/saved.\n- Orbis's `work` view now holds: **filters** (city / type / category pills), **open roles**\n  (6 dense cards: salary, tags, VERIFIED badge, match %, **Apply**), **Candidates** (recruiter, 5),\n  plus Orbis's original \"How it works\" + \"Fairness rules\" cards.\n- **The bridge (why it's a real integration):**\n  1. **Aura → résumé** (Orbis profile is the candidate's résumé)\n  2. **verificationLevel → trust** (verified badges)\n  3. **Apply → Commitment + a Today follow-up + an audit entry** (consent)\n  4. **Fairness:** match score is **skills-only** (never personality/Aura)\n- Verified: `app.html` + `app-mobile.html` → 6 role cards, 5 candidates, Apply→(commitment/Today/audit = 6 each), **0 console errors**; CI **5/5** green.\n\n## 3. Git state (important)\n| Commit | What | Status |\n|---|---|---|\n| `846d564` | orbis: port Orbis Work marketplace into Orbis's original app (keep its look) | ✅ pushed, **CI + Pages green** — **last known good** |\n| `ee6f945` | integrate Orbis Work into Orbis; remove loker + orbis-work | ✅ |\n| `238f447` | orbis-work: merge Orbis + Loker into one app | ✅ |\n\n**UNCOMMITTED / UNFINISHED (must resolve):** `apps/orbis/web/app.html` has **dangling partial\nedits** from the interrupted last task:\n- `onclick=\"massApplyWork()\"` — **`massApplyWork()` is NOT defined** (clicking it errors)\n- Empty cards with **no renderers**: `#workCompaniesList` (\"Companies\"), `#workChatList` +\n  `#workChatThread` (\"Messages\")\n- `app-mobile.html` is **untouched** (still at committed state) → desktop/mobile mismatch.\n- Also unrelated dirty files: `agents-dashboard/*`, `agents-lab/*` (**do not commit these**).\n\n## 4. ⏳ PENDING TASK (exactly where it stopped)\nThe user said **\"yes add them\"** — i.e. add to Orbis's `work` view (BOTH `app.html` and\n`app-mobile.html`), wired to Orbis's engine (`navigateTo`/`renderWork`, `state.work`,\n`state.commitments`, `state.todayItems`, `state.auditLog`, `persist`):\n1. **Company pages** — company profile (size, funding stage, rating + reviews, open roles).\n2. **Employer chat** — chat filter tabs (All/Unread/New/Interview), **prewritten message\n   templates**, action bar (Call / Share contact / Send résumé / Not interested).\n3. **Mass-apply**.\nThen: clean up the dangling partial edits, run CI, verify in a real browser, and (optionally)\npush to GitHub + update Obsidian.\n\n## 5. Repo contract (MUST follow)\n- Layout: `apps/<name>/{web,server,tests,docs}` + `README.md`.\n- Backend: **Python 3 stdlib only** (`http.server`, `sqlite3`, `json`) — no `pip install`, no build step.\n- Tests: hermetic, auto-discovered by `scripts/run_all_tests.py` (exit 0/1).\n- CI: `scripts/build_site.py` → `scripts/check_site.py` → `scripts/run_all_tests.py`; Pages deploy.\n- Ports: **orbis 8765**, peers 8788, house-of-articles 8789.\n- Pages gotchas checked by `check_site.py`: **absolute paths** and **filename case**.\n- ⚠️ **Orbis is server-first (`fetch`)**, unlike peers/house-of-articles which are offline-first\n  (no `fetch`). Match the file you are editing.\n\n## 6. Hard-won cautions (from bugs hit last time)\n- **Verify subagent file claims against the filesystem** (repo policy) — subagents once reported\n  success while shipping a 14 KB stub, a shrunk file, and lost features.\n- **Preserve UTF-8** — a subagent once corrupted the encoding → mojibake (`â€`, `ðŸ`).\n- **Never shrink files / drop features**; hard-check job-card count (must be **6**).\n- Watch for JS pitfalls: `el?.prop = x` (optional-chaining assignment is invalid); a local\n  `const t = …` shadows the global i18n `t()` function.\n- Confirm **0 console errors** in a real browser (Playwright + Chromium are installed), not static sim.\n\n## 7. How to run / verify\n```powershell\npython apps/orbis/server/server.py            # → http://127.0.0.1:8765/\npython scripts/run_all_tests.py\npython scripts/build_site.py ; python scripts/check_site.py ; python scripts/run_all_tests.py\n```\nLive: https://juwpegatron.github.io/projects/orbis/app.html\n\n## 8. Key reference files\n- `apps/orbis/docs/Orbis - Project Home.md`, `apps/orbis/docs/Orbis Master Guide.md`\n- `apps/orbis/server/server.py` (the `work` seed + API)\n- `apps/orbis/web/app.html` / `app-mobile.html`\n- Obsidian vault: `Orbis App/Orbis — Project Home.md` (current); `Loker/` + `Orbis Work/` marked\n  **⚠️ SUPERSEDED**.\n\n## 9. Immediate next step\n**Finish §4**: implement company pages + employer chat + mass-apply in the `work` view of **both**\n`app.html` and `app-mobile.html`, wired to Orbis's bridge; replace/remove the dangling partial\nHTML; run the full CI loop; verify in a browser (0 console errors, 6 cards); then push + Obsidian\n**only if** everything passes.\n\n\n===== END HANDOFF.md =====",
+          "id": "prt_orbisworkrecover00000001",
+          "sessionID": "ses_orbisworkrecover00000001",
+          "messageID": "msg_orbisworkrecover00000001"
+        }
+      ]
+    }
+  ]
+}

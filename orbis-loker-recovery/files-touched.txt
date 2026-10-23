@@ -1,0 +1,43 @@
+C:\Users\JUWEN_~1\AppData\Local\Temp\opencode\_shot.py
+C:\Users\JUWEN_~1\AppData\Local\Temp\opencode\sshot\_shot.py
+C:\Users\JUWEN_~1\AppData\Local\Temp\opencode\sshot\_diag.py
+C:\Users\juwen_lie\Documents\Default Project\apps\loker\web\mobile.html
+C:\Users\JUWEN_~1\AppData\Local\Temp\opencode\sshot\_shot2.py
+C:\Users\JUWEN_~1\AppData\Local\Temp\opencode\sshot\_leaks.py
+C:\Users\juwen_lie\Documents\Default Project\apps\loker\web\index.html
+C:\Users\juwen_lie\Documents\Default Project\apps\loker\docs\PRD.md
+C:\Users\JUWEN_~1\AppData\Local\Temp\opencode\sshot\_diag2.py
+C:\Users\JUWEN_~1\AppData\Local\Temp\opencode\sshot\_diag3.py
+C:\Users\JUWEN_~1\AppData\Local\Temp\opencode\sshot\_findline.py
+C:\Users\JUWEN_~1\AppData\Local\Temp\opencode\sshot\_auth.py
+C:\Users\JUWEN_~1\AppData\Local\Temp\opencode\sshot\_feed.py
+C:\Users\JUWEN_~1\AppData\Local\Temp\opencode\sshot\_repair.py
+C:\Users\JUWEN_~1\AppData\Local\Temp\opencode\sshot\_repair2.py
+C:\Users\JUWEN_~1\AppData\Local\Temp\opencode\sshot\_repair3.py
+C:\Users\JUWEN_~1\AppData\Local\Temp\opencode\sshot\_inspect.py
+C:\Users\JUWEN_~1\AppData\Local\Temp\opencode\sshot\_w1b.py
+C:\Users\juwen_lie\Documents\Default Project\apps\loker\server\server.py
+C:\Users\juwen_lie\Documents\Default Project\apps\loker\docs\Employer-Validation-Plan.md
+C:\Users\juwen_lie\Documents\Obsidian Vault\Loker\Loker — Project Home.md
+C:\Users\juwen_lie\Documents\Obsidian Vault\Loker\Loker PRD.md
+C:\Users\juwen_lie\Documents\Obsidian Vault\Loker\Employer Validation Plan.md
+C:\Users\juwen_lie\Documents\Default Project\apps\loker\docs\Loker Master Guide.md
+C:\Users\JUWEN_~1\AppData\Local\Temp\opencode\sshot\md2html.py
+C:\Users\JUWEN_~1\AppData\Local\Temp\opencode\sshot\buildpdf.py
+C:\Users\JUWEN_~1\AppData\Local\Temp\opencode\sshot\_ow.py
+C:\Users\JUWEN_~1\AppData\Local\Temp\opencode\sshot\_ow2.py
+C:\Users\juwen_lie\Documents\Default Project\apps\orbis-work\web\index.html
+C:\Users\juwen_lie\Documents\Default Project\apps\orbis-work\web\mobile.html
+C:\Users\juwen_lie\Documents\Default Project\apps\orbis-work\docs\Orbis Work Master Guide.md
+C:\Users\juwen_lie\Documents\Obsidian Vault\Orbis Work\Orbis Work — Project Home.md
+C:\Users\juwen_lie\Documents\Obsidian Vault\Orbis Work\Orbis Work Master Guide.md
+C:\Users\juwen_lie\Documents\Default Project\apps\orbis\server\server.py
+C:\Users\juwen_lie\Documents\Default Project\apps\orbis\tests\verify_api.py
+C:\Users\juwen_lie\Documents\Default Project\scripts\build_site.py
+C:\Users\juwen_lie\Documents\Default Project\README.md
+C:\Users\juwen_lie\Documents\Default Project\apps\orbis\tests\test_static_integrity.py
+C:\Users\juwen_lie\Documents\Default Project\apps\orbis\docs\Orbis — Project Home.md
+C:\Users\juwen_lie\Documents\Obsidian Vault\Orbis App\Orbis — Project Home.md
+C:\Users\juwen_lie\Documents\Default Project\apps\orbis\web\app.html
+C:\Users\JUWEN_~1\AppData\Local\Temp\opencode\sshot\_orbiswork.py
+C:\Users\juwen_lie\Documents\Default Project\apps\orbis\web\app-mobile.html
